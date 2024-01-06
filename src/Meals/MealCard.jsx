@@ -1,10 +1,10 @@
 import React, { Fragment, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './MealCard.css'
-import Cart from '../Cart/Cart.jsx';
+import Cart from '../Carts/Cart.jsx';
 import { Data } from '../Data/Data.jsx'
 
-function MealCard() {
+function MealCard({ updateCartData }) {
     const [cartItems, setCartItems] = useState([])
     const [ShowcartItems, setShowCartItems] = useState(false)
     const NavigateToCart = useNavigate()
@@ -17,7 +17,10 @@ function MealCard() {
 
     const showCart = () => {
         setShowCartItems(true)
-        NavigateToCart("/Cart")
+        updateCartData(cartItems)
+        
+        NavigateToCart("/Carts/Cart")
+
     }
 
     return (
@@ -35,11 +38,11 @@ function MealCard() {
                     </div>
                 ))}
             </div>
-            <button onClick={showCart}>cart</button>
-            {ShowcartItems && <div className='cart'>
+            <button onClick={showCart}>Cart</button>
+            {ShowcartItems && cartItems.length>0 && <div className='cart'>
                 <Cart cartItems={cartItems} setCartItems={setCartItems} ></Cart>
-            </div>} 
-             
+            </div>}
+
         </Fragment>
     );
 }
