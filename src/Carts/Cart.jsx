@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import './Cart.css'
 import { useNavigate } from 'react-router-dom';
 
 function Cart(props) {
-    const { cartData,setCartData } = props
+    const { cartData, setCartData } = props
 
     const Delete = (index) => {
         const newCartItem = [...cartData]
@@ -14,6 +14,26 @@ function Cart(props) {
     const navigateToHome = useNavigate()
     const goToHome = () => {
         navigateToHome('/')
+    }
+
+    const [message, setMessage] = useState(null);
+    const order = async (e) => {
+        e.preventDefault()
+        const response = await fetch("https://foodyapp-1c2bb-default-rtdb.firebaseio.com/foody.json", {
+            method: "POST",
+            headers: { "content-type": "application/json", },
+            body: JSON.stringify({
+                cartData
+            })
+        })
+
+        if (response.ok) {
+            setCartData([])
+            setMessage("Order Send!");
+            setTimeout(() => {
+                setMessage(null);
+            }, 5000);
+        }
     }
 
     return (
@@ -27,7 +47,8 @@ function Cart(props) {
                     }
                 </ul>
                 <button onClick={goToHome}>Home</button>
-                <button>Order</button>
+                <button onClick={order}>Order</button>
+                {message && <div >{message}</div>}
             </div>
         </Fragment>
     );
