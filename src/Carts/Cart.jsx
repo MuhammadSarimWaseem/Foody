@@ -41,9 +41,10 @@ function Cart(props) {
             <div className='CartItem'>
                 <ul>
                     {
-                        cartData.map((item, index) => <li key={index}>{item.names} - {item.price}
-                            <button onClick={() => Delete(index)}>X</button>
-                        </li>)
+                        cartData.map((item, index) =>
+                            <li key={index}>{item.names} - {item.price}
+                                <button onClick={() => Delete(index)}>X</button>
+                            </li>)
                     }
                 </ul>
                 <button onClick={goToHome}>Home</button>
