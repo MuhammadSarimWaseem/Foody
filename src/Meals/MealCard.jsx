@@ -38,7 +38,7 @@ function MealCard({ updateCartData }) {
             </div>
             <button onClick={showCart}>Cart</button>
             {ShowcartItems && cartItems.length > 0 && <div className='cart'>
-                <Cart cartItems={cartItems} setCartItems={setCartItems} ></Cart>
+                <Cart setCartItems={setCartItems}></Cart>
             </div>}
         </Fragment>
     );

@@ -3,12 +3,12 @@ import './Cart.css'
 import { useNavigate } from 'react-router-dom';
 
 function Cart(props) {
-    const { cartData, setCartItems } = props
-    
+    const { cartData,setCartData } = props
+
     const Delete = (index) => {
         const newCartItem = [...cartData]
         newCartItem.splice(index, 1)
-        setCartItems(newCartItem)
+        setCartData(newCartItem)
     }
 
     const navigateToHome = useNavigate()

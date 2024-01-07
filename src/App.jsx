@@ -17,7 +17,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/*' element={<MealCard updateCartData={updateCartData} />} />
-          <Route path='/Carts/Cart' element={<Cart cartData={cartData} />} />
+          <Route path='/Carts/Cart' element={<Cart cartData={cartData} setCartData={setCartData} />} />
         </Routes>
       </BrowserRouter>
     </Fragment>
