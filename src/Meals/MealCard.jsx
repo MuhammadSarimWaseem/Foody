@@ -16,9 +16,11 @@ function MealCard({ updateCartData }) {
     }
 
     const showCart = () => {
-        setShowCartItems(true)
-        updateCartData(cartItems)
-        NavigateToCart("/Carts/Cart")
+        if (cartItems.length > 0) {
+            updateCartData(cartItems)
+            setShowCartItems(true)
+            NavigateToCart("/Carts/Cart")
+        }
     }
 
     return (
@@ -37,7 +39,7 @@ function MealCard({ updateCartData }) {
                 ))}
             </div>
             <button onClick={showCart}>Cart</button>
-            {ShowcartItems && cartItems.length > 0 && <div className='cart'>
+            {ShowcartItems && <div className='cart'>
                 <Cart setCartItems={setCartItems}></Cart>
             </div>}
         </Fragment>
