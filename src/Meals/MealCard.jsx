@@ -18,9 +18,7 @@ function MealCard({ updateCartData }) {
     const showCart = () => {
         setShowCartItems(true)
         updateCartData(cartItems)
-        
         NavigateToCart("/Carts/Cart")
-
     }
 
     return (
@@ -39,10 +37,9 @@ function MealCard({ updateCartData }) {
                 ))}
             </div>
             <button onClick={showCart}>Cart</button>
-            {ShowcartItems && cartItems.length>0 && <div className='cart'>
+            {ShowcartItems && cartItems.length > 0 && <div className='cart'>
                 <Cart cartItems={cartItems} setCartItems={setCartItems} ></Cart>
             </div>}
-
         </Fragment>
     );
 }

@@ -10,10 +10,9 @@ function Cart(props) {
         setCartItems(newCartItem)
     }
 
-    const navigateToHome=useNavigate()
-    const goToHome=()=>{
+    const navigateToHome = useNavigate()
+    const goToHome = () => {
         navigateToHome('/')
-
     }
 
     return (
@@ -26,7 +25,6 @@ function Cart(props) {
                         </li>)
                     }
                 </ul>
-
                 <button onClick={goToHome}>Home</button>
                 <button>Order</button>
             </div>
