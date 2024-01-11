@@ -1,15 +1,28 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import './Cart.css'
 import { useNavigate } from 'react-router-dom';
 
 function Cart(props) {
     const { cartData, setCartData } = props
+    const [totalAmount, setTotalAmount] = useState(0)
 
     const Delete = (index) => {
         const newCartItem = [...cartData]
         newCartItem.splice(index, 1)
         setCartData(newCartItem)
     }
+
+    const calculateTotalAmount = () => {
+        let total = 0;
+        cartData.forEach(item => {
+            total += item.price;
+        });
+        setTotalAmount(total);
+    };
+
+    useEffect(() => {
+        calculateTotalAmount();
+    }, [cartData]);
 
     const navigateToHome = useNavigate()
     const goToHome = () => {
@@ -33,6 +46,8 @@ function Cart(props) {
             setTimeout(() => {
                 setMessage(null);
             }, 5000);
+        } else {
+            setMessage("Failed to send order");
         }
     }
 
@@ -46,6 +61,7 @@ function Cart(props) {
                                 <button onClick={() => Delete(index)}>X</button>
                             </li>)
                     }
+                    <li>Total Amount : {totalAmount}</li>
                 </ul>
                 <button onClick={goToHome}>Home</button>
                 <button onClick={order}>Order</button>

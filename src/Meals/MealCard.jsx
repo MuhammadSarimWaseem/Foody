@@ -7,12 +7,14 @@ import { Data } from '../Data/Data.jsx'
 function MealCard({ updateCartData }) {
     const [cartItems, setCartItems] = useState([])
     const [ShowcartItems, setShowCartItems] = useState(false)
+    const [items,setItems ] = useState(0)
     const NavigateToCart = useNavigate()
 
     const addToCart = (item) => {
         setCartItems((previousList) => {
             return [...previousList, item]
         })
+        setItems(items+1)
     }
 
     const showCart = () => {
@@ -32,13 +34,13 @@ function MealCard({ updateCartData }) {
                             <div className="card-body">
                                 <h5 className="card-title">Dish: {val.names}</h5>
                                 <p className="card-text">Price: {val.price}</p>
-                                <button onClick={() => addToCart(val)}>➕</button>
+                                <button className='add-button' onClick={() => addToCart(val)}>➕</button>
                             </div>
                         </div>
                     </div>
                 ))}
             </div>
-            <button onClick={showCart}>Cart</button>
+            <button onClick={showCart} className='cart-button'>Cart <span>{items}</span></button>
             {ShowcartItems && <div className='cart'>
                 <Cart setCartItems={setCartItems}></Cart>
             </div>}
