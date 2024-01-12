@@ -79,23 +79,18 @@ span {
   background-color: #b76e52;
 }
 
-@media (max-width: 746px) {
-  .cardlists {
-    justify-content: center;
-    padding: 20px; /* Adjust padding for smaller screens */
-  }
-
+@media (max-width: 1024px) {
   .card {
-    width: calc(50% - 20px); /* Adjust the width to fit two cards in one row with some margin */
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: calc(100% - 20px);
   }
 
-  .card-body {
-    padding: 8px;
-  }
-
-  .add-button,
-  .cart-button {
-    font-size: 1rem;
-    padding: 4px 8px;
+  .cardlists {
+    padding: 20px;
   }
 }
