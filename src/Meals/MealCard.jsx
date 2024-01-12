@@ -30,7 +30,7 @@ function MealCard({ updateCartData }) {
             <div className="cardlists">
                 {Data.map((val) => (
                     <div key={val.id}>
-                        <div className="card" style={{ width: "22rem" }}>
+                        <div className="card" style={{ width: "21.7rem" }}>
                             <div className="card-body">
                                 <h5 className="card-title">Dish: {val.names}</h5>
                                 <p className="card-text">Price: {val.price}</p>
