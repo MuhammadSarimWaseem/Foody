@@ -1,7 +1,8 @@
-body{
+body {
   margin: 0;
   padding: 0;
 }
+
 .header {
   background-color: #8a2b06;
   color: white;
@@ -33,11 +34,13 @@ body{
 }
 
 @media (max-width: 600px) {
-  .header{
-    width: 77%;
+  .header {
+    width: 100%; /* Adjusted for full width on small screens */
+    padding: 0 5%; /* Adjusted padding for better visibility */
   }
-  
-.main-image {
-  height: 20rem;
-}
+
+  .main-image {
+    height: 18rem; /* Further adjusted height for smaller screens */
+  }
+ 
 }
