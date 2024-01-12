@@ -1,8 +1,9 @@
-body{
+body {
   margin: 0;
   padding: 0;
 }
-.cardlist {
+
+.cardlists {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -10,7 +11,7 @@ body{
 }
 
 .card {
-  width: calc(33.33% - 20px); /* Adjust the width to fit three cards in one row with some margin */
+  width: calc(33.33% - 20px);
   margin: 10px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -49,16 +50,20 @@ span {
   padding: 3px;
 }
 
-.add-button {
+.add-button,
+.cart-button {
   font-size: 1.2rem;
   padding: 8px 16px;
   margin-right: 8px;
   cursor: pointer;
-  background-color: #8a2b06;
-  color: #fff;
   border: none;
   border-radius: 4px;
   transition: background-color 0.3s ease;
+}
+
+.add-button {
+  background-color: #8a2b06;
+  color: #fff;
 }
 
 .add-button:hover {
@@ -66,29 +71,31 @@ span {
 }
 
 .cart-button {
-  text-align: center;
-  align-items: center;
-  font-size: 1.2rem;
-  padding: 8px 16px;
-  margin-right: 8px;
-  cursor: pointer;
   background-color: #8a2b06;
   color: #fff;
-  border: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
 }
 
 .cart-button:hover {
   background-color: #b76e52;
 }
 
-@media (max-width: 600px) {
-  .cardlist {
+@media (max-width: 746px) {
+  .cardlists {
     justify-content: center;
+    padding: 20px; /* Adjust padding for smaller screens */
   }
 
   .card {
-    width: 100%; /* Make the card take full width on smaller screens */
+    width: calc(50% - 20px); /* Adjust the width to fit two cards in one row with some margin */
+  }
+
+  .card-body {
+    padding: 8px;
+  }
+
+  .add-button,
+  .cart-button {
+    font-size: 1rem;
+    padding: 4px 8px;
   }
 }

@@ -27,7 +27,7 @@ function MealCard({ updateCartData }) {
 
     return (
         <Fragment>
-            <div className="cardlist">
+            <div className="cardlists">
                 {Data.map((val) => (
                     <div key={val.id}>
                         <div className="card" style={{ width: "25rem" }}>
