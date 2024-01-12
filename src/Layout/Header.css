@@ -33,6 +33,9 @@ body{
 }
 
 @media (max-width: 600px) {
+  .header{
+    width: 77%;
+  }
   
 .main-image {
   height: 20rem;
