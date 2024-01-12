@@ -1,6 +1,6 @@
 .CartItem {
     font-family: 'Roboto', sans-serif;
-    width: 33%;
+    width: 40%;
     margin: auto;
     padding: 20px;
     background-color: #f7f7f7;
@@ -41,9 +41,11 @@
     transition: background-color 0.3s ease;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 746px) {
     .CartItem {
         padding: 10px;
+        width: 80%;
+
     }
 
     .CartItem input {
