@@ -11,7 +11,8 @@
 .CartItem button {
     padding: 10px;
     cursor: pointer;
-    background-color: rgb(36, 31, 31);
+    background-color: #8a2b06;
+    ;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -19,7 +20,7 @@
 }
 
 .CartItem button:hover {
-    background-color: #5c5353;
+    background-color: #b76e52;
 }
 
 .CartItem ul {
