@@ -7,14 +7,14 @@ import { Data } from '../Data/Data.jsx'
 function MealCard({ updateCartData }) {
     const [cartItems, setCartItems] = useState([])
     const [ShowcartItems, setShowCartItems] = useState(false)
-    const [items,setItems ] = useState(0)
+    const [items, setItems] = useState(0)
     const NavigateToCart = useNavigate()
 
     const addToCart = (item) => {
         setCartItems((previousList) => {
             return [...previousList, item]
         })
-        setItems(items+1)
+        setItems(items + 1)
     }
 
     const showCart = () => {

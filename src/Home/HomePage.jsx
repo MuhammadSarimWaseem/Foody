@@ -3,14 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import './HomePage.css'
 
 function HomePage() {
-    const navigateToLogin = useNavigate()
 
+    const navigateToLogin = useNavigate()
     const Login = () => {
         navigateToLogin('/Login/LoginPage')
     }
 
     const navigateToSignUp = useNavigate()
-
     const SignUp = () => {
         navigateToSignUp('/SignUp/SignUpPage')
     }
