@@ -1,11 +1,12 @@
 .CartItem {
     font-family: 'Roboto', sans-serif;
-    width: 40%;
-    margin: auto;
-    padding: 20px;
+    width:100%;
+    padding: 40px;
     background-color: #f7f7f7;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10em;
+
 }
 
 .CartItem button {

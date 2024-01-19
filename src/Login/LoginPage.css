@@ -21,6 +21,8 @@ form {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     animation: fadeInUp 0.5s ease-out, fadeIn 1s ease-out;
+    margin-top: 10em;
+
 }
 
 input {

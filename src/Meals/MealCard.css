@@ -8,6 +8,8 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 40px;
+  margin-top: 22em;
+
 }
 
 .card {

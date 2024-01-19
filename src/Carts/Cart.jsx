@@ -63,7 +63,7 @@ function Cart(props) {
                     }
                     <li>Total Amount : {totalAmount}</li>
                 </ul>
-                <button onClick={goToHome}>Home</button>
+                <button onClick={goToHome}>Home</button> 
                 <button onClick={order}>Order</button>
                 {message && <div >{message}</div>}
             </div>

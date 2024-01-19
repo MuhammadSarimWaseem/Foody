@@ -24,7 +24,10 @@ body {
   height: 21.4rem;
   z-index: 0;
   overflow: hidden;
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
 }
 
 .main-image img {
