@@ -24,6 +24,7 @@ body {
   height: 21.4rem;
   z-index: 0;
   overflow: hidden;
+
 }
 
 .main-image img {
@@ -31,16 +32,17 @@ body {
   height: 100%;
   object-fit: cover;
   transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
+
 }
 
 @media (max-width: 600px) {
   .header {
-    width: 100%; /* Adjusted for full width on small screens */
-    padding: 0 5%; /* Adjusted padding for better visibility */
+    width: 100%;
+    padding: 0 5%;
   }
 
   .main-image {
-    height: 18rem; /* Further adjusted height for smaller screens */
+    height: 18rem;
   }
- 
+
 }
