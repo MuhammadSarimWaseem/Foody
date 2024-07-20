@@ -1,3 +1,7 @@
+# Project Description
+
+Developed a user-friendly food ordering website using React for the frontend and Firebase for backend services. The platform includes a comprehensive cart functionality and real-time database integration for seamless user experience.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
