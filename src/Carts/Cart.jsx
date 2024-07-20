@@ -32,7 +32,7 @@ function Cart(props) {
     const [message, setMessage] = useState(null);
     const order = async (e) => {
         e.preventDefault()
-        const response = await fetch("https://foodyapp-1c2bb-default-rtdb.firebaseio.com/foody.json", {
+        const response = await fetch(process.env.REACT_APP_FIREBASE_CART_DATABASE_URL, {
             method: "POST",
             headers: { "content-type": "application/json", },
             body: JSON.stringify({
