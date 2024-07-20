@@ -34,7 +34,7 @@ const SignUpPage = () => {
           await updateProfile(user, {
             displayName: name,
           });
-          navigate("/");
+          navigate(" /Meals/MealCard");
         })
         .catch((error) => {
           setSubmitButtonDisabled(false);
