@@ -49,11 +49,11 @@ function LoginPage() {
 
     return (
         <Fragment>
-            <form>
+            <form onSubmit={Login}>
                 <h1>LOGIN</h1>
                 Email:<input required name='email' onChange={InputHandler} placeholder='Enter your Email' type='email' value={input.email} ></input><br />
                 Password:<input required name='password' onChange={InputHandler} placeholder='Enter your Password' type="password" value={input.password} /><br />
-                <button disabled={submitButtonDisabled} onClick={Login}>Log in</button>
+                <button disabled={submitButtonDisabled} >Log in</button>
                 <p>
                     Don't have an account?{" "}
                     <span>

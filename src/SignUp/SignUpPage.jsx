@@ -53,12 +53,12 @@ const SignUpPage = () => {
 
   return (
     <Fragment>
-      <form>
+      <form onSubmit={Login}>
         <h1>SIGN UP</h1>
         Name:<input required name='name' onChange={InputHandler} placeholder='Enter your name' type='text' value={input.name}></input><br />
         Email:<input required name='email' onChange={InputHandler} placeholder='Enter your Email' type='email' value={input.email} ></input><br />
         Password:<input required name='password' onChange={InputHandler} placeholder='Enter your Password' type="password" value={input.password} /><br />
-        <button onClick={Login} disabled={submitButtonDisabled}>Sign up</button>
+        <button  disabled={submitButtonDisabled}>Sign up</button>
         <p>
           Already have an account?{" "}
           <span>
