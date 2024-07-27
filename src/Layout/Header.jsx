@@ -7,9 +7,9 @@ function Header() {
             <header className='header'>
                 <h1>🍞 Foody</h1>
             </header>
-            <div className='main-image'>
+            {/* <div className='main-image'>
                 <img src="https://img.freepik.com/free-photo/grunge-black-concrete-textured-background_53876-124541.jpg" alt='' />
-            </div>
+            </div> */}
         </Fragment>
     );
 }
