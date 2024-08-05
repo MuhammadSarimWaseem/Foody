@@ -62,7 +62,7 @@ const SignUpPage = () => {
         <p>
           Already have an account?{" "}
           <span>
-            <Link to="/Login">Login</Link>
+            <Link to="/Login/LoginPage">Login</Link>
           </span>
         </p>
         {message && <div className="message">{message}</div>}

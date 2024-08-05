@@ -40,10 +40,12 @@ function MealCard({ updateCartData }) {
                     </div>
                 ))}
             </div>
-            <button onClick={showCart} className='cart-button'>Cart <span>{items}</span></button>
-            {ShowcartItems && <div className='cart'>
-                <Cart setCartItems={setCartItems}></Cart>
-            </div>}
+            <div className='button-div'>
+                <button onClick={showCart} className='cart-button'>Cart <span>{items}</span></button>
+                {ShowcartItems &&
+                    <Cart setCartItems={setCartItems}></Cart>
+                }
+            </div>
         </Fragment>
     );
 }

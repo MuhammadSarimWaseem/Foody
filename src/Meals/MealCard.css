@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  overflow-y: auto; 
+  overflow-y: auto;
 }
 
 .cardlists {
@@ -9,7 +9,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 40px;
-  margin-top: 22em; 
+  margin-top: 22em;
 }
 
 .card {
@@ -39,10 +39,6 @@ body {
   font-size: 1.2rem;
   color: #666;
   margin-bottom: 16px;
-}
-
-.cart {
-  text-align: center;
 }
 
 span {
@@ -82,13 +78,19 @@ span {
   background-color: #b76e52;
 }
 
+.button-div {
+  align-items: center;
+  text-align: center;
+  padding-bottom: 2em;
+}
+
 @media (min-width: 650px) and (max-width: 1300px) {
   .card {
     width: calc(50% - 20px);
   }
 
   .cardlists {
-    margin-top: 50em; 
+    margin-top: 50em;
   }
 }
 
@@ -99,6 +101,6 @@ span {
 
   .cardlists {
     padding: 10px;
-    margin-top: 100em; 
+    margin-top: 100em;
   }
 }

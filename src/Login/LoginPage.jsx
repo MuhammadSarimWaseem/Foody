@@ -57,7 +57,7 @@ function LoginPage() {
                 <p>
                     Don't have an account?{" "}
                     <span>
-                        <Link to="/SignUp">Sign up</Link>
+                        <Link to="/SignUp/SignUpPage">Sign up</Link>
                     </span>
                 </p>
                 {message && <div className="message">{message}</div>}
