@@ -1,32 +1,57 @@
 import React, { Fragment, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './MealCard.css'
+import './MealCard.css';
 import Cart from '../Carts/Cart.jsx';
-import { Data } from '../Data/Data.jsx'
+import { Data } from '../Data/Data.jsx';
+import { getAuth } from "firebase/auth";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function MealCard({ updateCartData }) {
-    const [cartItems, setCartItems] = useState([])
-    const [ShowcartItems, setShowCartItems] = useState(false)
-    const [items, setItems] = useState(0)
-    const NavigateToCart = useNavigate()
+    const [cartItems, setCartItems] = useState([]);
+    const [ShowcartItems, setShowCartItems] = useState(false);
+    const [items, setItems] = useState(0);
+    const NavigateTo = useNavigate();
 
     const addToCart = (item) => {
-        setCartItems((previousList) => {
-            return [...previousList, item]
-        })
-        setItems(items + 1)
-    }
+        setCartItems((previousList) => [...previousList, item]);
+        setItems(items + 1);
+        toast('Item added to cart!', {
+            position: "top-right",
+            autoClose: 500,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            progress: undefined,
+            theme: "dark",
+        });
+    };
 
     const showCart = () => {
+        const auth = getAuth();
+        const user = auth.currentUser;
         if (cartItems.length > 0) {
-            updateCartData(cartItems)
-            setShowCartItems(true)
-            NavigateToCart("/Carts/Cart")
+            updateCartData(cartItems);
+            setShowCartItems(true);
+            if (user) {
+                NavigateTo("/Carts/Cart");
+            } else {
+                NavigateTo("/Home/HomePage");
+                toast.warn('Login First!', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    progress: undefined,
+                    theme: "dark",
+                });
+            }
         }
-    }
+    };
 
     return (
-        <Fragment >
+        <Fragment>
             <div className="cardlists">
                 {Data.map((val) => (
                     <div key={val.id}>
@@ -42,9 +67,7 @@ function MealCard({ updateCartData }) {
             </div>
             <div className='button-div'>
                 <button onClick={showCart} className='cart-button'>Cart <span>{items}</span></button>
-                {ShowcartItems &&
-                    <Cart setCartItems={setCartItems}></Cart>
-                }
+                {ShowcartItems && <Cart setCartItems={setCartItems}></Cart>}
             </div>
         </Fragment>
     );

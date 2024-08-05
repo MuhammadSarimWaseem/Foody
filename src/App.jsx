@@ -7,6 +7,7 @@ import Header from './Layout/Header.jsx'
 import MealCard from './Meals/MealCard';
 import Cart from './Carts/Cart.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   const [cartData, setCartData] = useState([])
@@ -26,6 +27,7 @@ function App() {
           <Route path='/Carts/Cart' element={<Cart cartData={cartData} setCartData={setCartData} />} />
         </Routes>
       </BrowserRouter>
+      <ToastContainer />
     </Fragment>
   );
 }

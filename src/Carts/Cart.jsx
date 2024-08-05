@@ -1,6 +1,8 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import './Cart.css'
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Cart(props) {
     const { cartData, setCartData } = props
@@ -29,7 +31,6 @@ function Cart(props) {
         navigateToHome('/')
     }
 
-    const [message, setMessage] = useState(null);
     const order = async (e) => {
         e.preventDefault()
         const response = await fetch(process.env.REACT_APP_FIREBASE_CART_DATABASE_URL, {
@@ -42,12 +43,25 @@ function Cart(props) {
 
         if (response.ok) {
             setCartData([])
-            setMessage("Order Send!");
-            setTimeout(() => {
-                setMessage(null);
-            }, 5000);
+            toast("Order Send!", {
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                progress: undefined,
+                theme: "dark",
+            });
         } else {
-            setMessage("Failed to send order");
+            toast("Failed to send order", {
+                position: "bottom-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                progress: undefined,
+                theme: "dark",
+            });
         }
     }
 
@@ -65,7 +79,6 @@ function Cart(props) {
                 </ul>
                 <button onClick={goToHome}>Home</button>
                 <button onClick={order}>Order</button>
-                {message && <div >{message}</div>}
             </div>
         </Fragment>
     );

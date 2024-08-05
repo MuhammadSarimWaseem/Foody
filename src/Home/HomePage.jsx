@@ -1,8 +1,16 @@
 import React, { Fragment } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './HomePage.css'
+import { getAuth, signOut } from "firebase/auth";
 
 function HomePage() {
+    const auth = getAuth();
+    signOut(auth).then(() => {
+
+    }).catch((error) => {
+        console.log(error);
+
+    });
 
     const navigateToLogin = useNavigate()
     const Login = () => {
