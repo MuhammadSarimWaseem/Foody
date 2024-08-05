@@ -26,7 +26,7 @@ function MealCard({ updateCartData }) {
     }
 
     return (
-        <Fragment>
+        <Fragment >
             <div className="cardlists">
                 {Data.map((val) => (
                     <div key={val.id}>

@@ -52,7 +52,7 @@ function Cart(props) {
     }
 
     return (
-        <Fragment>
+        <Fragment >
             <div className='CartItem'>
                 <ul>
                     {
