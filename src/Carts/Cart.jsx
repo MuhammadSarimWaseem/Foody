@@ -28,7 +28,7 @@ function Cart(props) {
 
     const navigateToHome = useNavigate()
     const goToHome = () => {
-        navigateToHome('/')
+        navigateToHome('/Meals/MealCard')
     }
 
     const order = async (e) => {
@@ -77,8 +77,11 @@ function Cart(props) {
                     }
                     <li>Total Amount : {totalAmount}</li>
                 </ul>
-                <button onClick={goToHome}>Home</button>
-                <button onClick={order}>Order</button>
+                <div className='btn-div'>
+                    <button onClick={goToHome}>Home</button>
+                    <button onClick={order}>Order</button>
+                </div>
+
             </div>
         </Fragment>
     );
