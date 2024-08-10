@@ -1,5 +1,14 @@
 body {
     background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0f0f0f;
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+    background-size: cover;
 }
 
 .CartItem {
@@ -21,6 +30,7 @@ body {
     justify-content: space-around;
     padding: 1.5em;
     margin-top: 10em;
+    overflow-y: hidden;
 }
 
 .CartItem ul {
@@ -75,6 +85,10 @@ body {
 }
 
 @media (max-width: 600px) {
+    html {
+        font-size: 65%;
+    }
+
     .CartItem {
         width: 90%;
     }
