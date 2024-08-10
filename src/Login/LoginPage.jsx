@@ -53,7 +53,7 @@ function LoginPage() {
                 <h1>LOGIN</h1>
                 Email:<input required name='email' onChange={InputHandler} placeholder='Enter your Email' type='email' value={input.email} ></input><br />
                 Password:<input required name='password' onChange={InputHandler} placeholder='Enter your Password' type="current-password" value={input.password} /><br />
-                <button disabled={submitButtonDisabled} type='submit' >Log in</button>
+                <button className='button' disabled={submitButtonDisabled} type='submit' >Log in</button>
                 <p>
                     Don't have an account?{" "}
                     <span>

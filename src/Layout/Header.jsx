@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import './Header.css'
+import './Header.css';
 
 function Header() {
     return (
@@ -8,7 +8,7 @@ function Header() {
                 <h1>🍞 Foody</h1>
             </header>
             <div className='main-image'>
-                <img src="https://img.freepik.com/free-photo/grunge-black-concrete-textured-background_53876-124541.jpg" alt='' />
+                <img src="https://img.freepik.com/free-photo/grunge-black-concrete-textured-background_53876-124541.jpg" alt='Background' />
             </div>
         </Fragment>
     );

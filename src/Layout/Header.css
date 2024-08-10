@@ -1,11 +1,13 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #0f0f0f;
+  font-family: 'Roboto', sans-serif;
 }
 
 .header {
-  background-color: #8a2b06;
-  color: white;
+  background: linear-gradient(135deg, #1c1c1c, #333333);
+  color: #ffffff;
   position: fixed;
   top: 0;
   left: 0;
@@ -15,8 +17,14 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 10%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.8);
   z-index: 10;
+  border-bottom: 1px solid #444;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  letter-spacing: 1.5px;
 }
 
 .main-image {
@@ -35,6 +43,7 @@ body {
   height: 100%;
   object-fit: cover;
   transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
+  filter: brightness(0.7);
 }
 
 @media (max-width: 600px) {
@@ -46,5 +55,4 @@ body {
   .main-image {
     height: 18rem;
   }
-
 }

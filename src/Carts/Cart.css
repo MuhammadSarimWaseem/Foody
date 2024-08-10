@@ -1,62 +1,82 @@
+body {
+    background-size: cover;
+}
+
 .CartItem {
     font-family: 'Roboto', sans-serif;
-    width: 100%;
-    padding: 40px;
-    background-color: #f7f7f7;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20em;
-}
-
-.CartItem button {
-    padding: 10px;
-    cursor: pointer;
-    background-color: #8a2b06;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.CartItem button:hover {
-    background-color: #b76e52;
+    width: 300px;
+    height: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: linear-gradient(135deg, #1c1c1c 30%, #333333 100%);
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+    animation: fadeInUp 0.5s ease-out;
+    border: 1px solid #444;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1.5em;
+    margin-top: 10em;
 }
 
 .CartItem ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.CartItem ul::-webkit-scrollbar {
+    display: none;
 }
 
 .CartItem li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    box-sizing: border-box;
-    margin: 8px 0;
+    background-color: #2c2c2c;
+    border: 1px solid #333;
+    margin-bottom: 8px;
     padding: 12px;
     border-radius: 4px;
+    color: #e0e0e0;
     animation: fadeIn 0.5s ease;
     transition: background-color 0.3s ease;
 }
-.btn-div{
+
+.CartItem button {
+    padding: 10px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(255, 75, 43, 0.5);
+}
+
+.CartItem button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 75, 43, 0.8);
+}
+
+.btn-div {
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
+    padding-top: 15px;
 }
+
 @media (max-width: 600px) {
     .CartItem {
-        padding: 10px;
-        width: 80%;
+        width: 90%;
     }
 
-    .CartItem input {
-        width: 100%;
-        margin-bottom: 10px;
-        margin-right: 0;
-    }
-
-    .CartItem li {
-        padding: 10px;
-    }
 }

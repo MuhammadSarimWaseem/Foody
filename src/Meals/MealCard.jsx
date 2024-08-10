@@ -16,7 +16,7 @@ function MealCard({ updateCartData }) {
     const addToCart = (item) => {
         setCartItems((previousList) => [...previousList, item]);
         setItems(items + 1);
-        toast('Item added to cart!', {
+        toast("🛒 Item added to cart!", {
             position: "top-right",
             autoClose: 500,
             hideProgressBar: false,
@@ -66,7 +66,7 @@ function MealCard({ updateCartData }) {
                 ))}
             </div>
             <div className='button-div'>
-                <button onClick={showCart} className='cart-button'>Cart <span>{items}</span></button>
+                <button onClick={showCart} className='cart-button'>Cart <span className='span'>{items}</span></button>
                 {ShowcartItems && <Cart setCartItems={setCartItems}></Cart>}
             </div>
         </Fragment>
