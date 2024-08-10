@@ -6,6 +6,7 @@ import { Data } from '../Data/Data.jsx';
 import { getAuth } from "firebase/auth";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Header from '../Layout/Header.jsx';
 
 function MealCard({ updateCartData }) {
     const [cartItems, setCartItems] = useState([]);
@@ -58,6 +59,8 @@ function MealCard({ updateCartData }) {
 
     return (
         <Fragment>
+            <Header></Header>
+
             <div className="cardlists">
                 {Data.map((val) => (
                     <div key={val.id}>

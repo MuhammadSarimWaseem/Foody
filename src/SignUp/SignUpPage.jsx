@@ -3,6 +3,7 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../Firebase";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
+import Header from '../Layout/Header';
 
 const SignUpPage = () => {
   const navigate = useNavigate();
@@ -45,12 +46,12 @@ const SignUpPage = () => {
             progress: undefined,
             theme: "dark",
             style: {
-                width: "70%", // Set a responsive width
-                maxWidth: "300px", // Limit the maximum width
-                margin: "0 auto", // Center on the screen
-                fontSize: "14px" // Smaller font size for mobile
+              width: "70%", // Set a responsive width
+              maxWidth: "300px", // Limit the maximum width
+              margin: "0 auto", // Center on the screen
+              fontSize: "14px" // Smaller font size for mobile
             },
-        });
+          });
         })
         .catch((error) => {
           setSubmitButtonDisabled(false);
@@ -69,6 +70,8 @@ const SignUpPage = () => {
 
   return (
     <Fragment>
+      <Header></Header>
+
       <form onSubmit={Login}>
         <h1>SIGN UP</h1>
         Name:<input required name='name' onChange={InputHandler} placeholder='Enter your name' type='text' value={input.name}></input><br />

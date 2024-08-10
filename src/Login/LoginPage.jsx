@@ -4,6 +4,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../Firebase";
 import './LoginPage.css';
 import { toast } from 'react-toastify';
+import Header from '../Layout/Header';
 
 function LoginPage() {
     const navigate = useNavigate();
@@ -65,6 +66,8 @@ function LoginPage() {
 
     return (
         <Fragment>
+            <Header></Header>
+
             <form onSubmit={Login}>
                 <h1>LOGIN</h1>
                 Email:<input required name='email' onChange={InputHandler} placeholder='Enter your Email' type='email' value={input.email} ></input><br />

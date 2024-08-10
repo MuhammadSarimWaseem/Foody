@@ -46,6 +46,31 @@ body {
   filter: brightness(0.7);
 }
 
+button {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  transition: transform 0.3s ease-in-out;
+  margin: 10px;
+  box-shadow: 0 4px 15px rgba(255, 75, 43, 0.5);
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 75, 43, 0.8);
+}
+
+.button-div {
+  align-items: center;
+  text-align: center;
+  padding-bottom: 2em;
+}
+
 @media (max-width: 600px) {
   .header {
     width: 100%;

@@ -17,10 +17,10 @@ function App() {
 
   return (
     <Fragment>
-      <Header></Header>
       <BrowserRouter>
         <Routes>
           <Route path='/*' element={<HomePage />} />
+          <Route path='/Layout/Header' element={<Header />} />
           <Route path='/Login/LoginPage' element={<LoginPage />} />
           <Route path='/SignUp/SignUpPage' element={<SignUpPage />} />
           <Route path='/Meals/MealCard' element={<MealCard updateCartData={updateCartData} />} />

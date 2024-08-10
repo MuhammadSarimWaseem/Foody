@@ -3,6 +3,7 @@ import './Cart.css'
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Header from '../Layout/Header';
 
 function Cart(props) {
     const { cartData, setCartData } = props
@@ -79,6 +80,8 @@ function Cart(props) {
 
     return (
         <Fragment >
+            <Header></Header>
+
             <div className='CartItem'>
                 <h1>CART ITEMS</h1>
                 <ul>
