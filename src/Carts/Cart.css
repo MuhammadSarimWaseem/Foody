@@ -29,8 +29,10 @@ body {
     flex-direction: column;
     justify-content: space-around;
     padding: 1.5em;
-    margin-top: 10em;
     overflow-y: hidden;
+    margin-top: 15rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .CartItem ul {

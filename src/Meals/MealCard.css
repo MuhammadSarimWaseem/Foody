@@ -59,7 +59,7 @@ body {
 
 .cart-button {
   border-radius: 25px;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .cart-button:hover {
@@ -95,6 +95,6 @@ body {
 
   .cardlists {
     padding: 10px;
-    margin-top: 110em;
+    margin-top: 135rem;
   }
 }

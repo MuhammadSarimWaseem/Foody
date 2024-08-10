@@ -62,7 +62,9 @@ p {
     transform: scale(1.05);
     box-shadow: 0 6px 20px rgba(255, 75, 43, 0.8);
 }
-
+p{
+    font-size: 1.2em;
+}
 @media (max-width: 600px) {
     .form {
         width: 90%;

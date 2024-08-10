@@ -68,7 +68,7 @@ function Cart(props) {
     return (
         <Fragment >
             <div className='CartItem'>
-                <h1>CARTITEMS</h1>
+                <h1>CART ITEMS</h1>
                 <ul>
                     {
                         cartData.map((item, index) =>
