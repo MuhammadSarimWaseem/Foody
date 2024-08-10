@@ -25,7 +25,7 @@ function Cart(props) {
 
     useEffect(() => {
         calculateTotalAmount();
-    }, [cartData]);
+    },);
 
     const navigateToHome = useNavigate()
     const goToHome = () => {
