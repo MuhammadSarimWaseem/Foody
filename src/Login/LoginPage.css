@@ -16,14 +16,12 @@ h1 {
 }
 
 form {
-    overflow-y: hidden;
     max-width: 400px;
     width: 100%;
     background: linear-gradient(135deg, #1c1c1c, #333333);
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
-    margin: 5em auto;
     border: 1px solid #444;
     margin-top: 18em;
 }

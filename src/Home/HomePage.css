@@ -16,7 +16,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 12em;
+    margin-top: 2em;
 
 }
 
@@ -31,7 +31,6 @@ body {
     border-radius: 12px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
     animation: fadeInUp 0.5s ease-out;
-    margin-top: 10em;
     border: 1px solid #444;
 }
 
@@ -98,6 +97,10 @@ body::before {
 @media (max-width: 546px) {
     body {
         min-height: 100vh;
+    }
+    .form{
+    padding: 20px;
+
     }
 
     .container {
