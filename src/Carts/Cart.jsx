@@ -53,10 +53,10 @@ function Cart(props) {
                 progress: undefined,
                 theme: "dark",
                 style: {
-                    width: "70%", // Set a responsive width
-                    maxWidth: "300px", // Limit the maximum width
-                    margin: "0 auto", // Center on the screen
-                    fontSize: "14px" // Smaller font size for mobile
+                    width: "70%",
+                    maxWidth: "300px",
+                    margin: "0 auto",
+                    fontSize: "14px"
                 },
             });
         } else {
@@ -69,10 +69,10 @@ function Cart(props) {
                 progress: undefined,
                 theme: "dark",
                 style: {
-                    width: "70%", // Set a responsive width
-                    maxWidth: "300px", // Limit the maximum width
-                    margin: "0 auto", // Center on the screen
-                    fontSize: "14px" // Smaller font size for mobile
+                    width: "70%",
+                    maxWidth: "300px",
+                    margin: "0 auto",
+                    fontSize: "14px"
                 },
             });
         }
