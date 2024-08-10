@@ -65,16 +65,11 @@ button:hover {
   box-shadow: 0 6px 20px rgba(255, 75, 43, 0.8);
 }
 
-.button-div {
-  align-items: center;
-  text-align: center;
-  padding-bottom: 2em;
-}
-
 @media (max-width: 600px) {
   .header {
     width: 100%;
     padding: 0 5%;
+    justify-content: space-around;
   }
 
   .main-image {
