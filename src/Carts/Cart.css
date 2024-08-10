@@ -28,9 +28,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 1.5em;
+    padding: 1.5rem;
     overflow-y: hidden;
-    margin-top: 9rem;
+    margin-top: 8rem;
 }
 
 .CartItem ul {
@@ -53,8 +53,8 @@ body {
     align-items: center;
     background-color: #2c2c2c;
     border: 1px solid #333;
-    margin-bottom: 8px;
-    padding: 12px;
+    margin-bottom: 4px;
+    padding: 4px;
     border-radius: 4px;
     color: #e0e0e0;
     animation: fadeIn 0.5s ease;
