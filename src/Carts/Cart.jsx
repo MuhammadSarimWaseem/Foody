@@ -45,22 +45,34 @@ function Cart(props) {
             setCartData([])
             toast("Order Send!", {
                 position: "bottom-center",
-                autoClose: 5000,
+                autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
                 progress: undefined,
                 theme: "dark",
+                style: {
+                    width: "70%", // Set a responsive width
+                    maxWidth: "300px", // Limit the maximum width
+                    margin: "0 auto", // Center on the screen
+                    fontSize: "14px" // Smaller font size for mobile
+                },
             });
         } else {
             toast("Failed to send order", {
                 position: "bottom-right",
-                autoClose: 5000,
+                autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
                 progress: undefined,
                 theme: "dark",
+                style: {
+                    width: "70%", // Set a responsive width
+                    maxWidth: "300px", // Limit the maximum width
+                    margin: "0 auto", // Center on the screen
+                    fontSize: "14px" // Smaller font size for mobile
+                },
             });
         }
     }

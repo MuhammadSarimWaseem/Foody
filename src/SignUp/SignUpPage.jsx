@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../Firebase";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 const SignUpPage = () => {
   const navigate = useNavigate();
@@ -35,6 +36,21 @@ const SignUpPage = () => {
             displayName: name,
           });
           navigate(" /Meals/MealCard");
+          toast("Account Created!", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            progress: undefined,
+            theme: "dark",
+            style: {
+                width: "70%", // Set a responsive width
+                maxWidth: "300px", // Limit the maximum width
+                margin: "0 auto", // Center on the screen
+                fontSize: "14px" // Smaller font size for mobile
+            },
+        });
         })
         .catch((error) => {
           setSubmitButtonDisabled(false);
