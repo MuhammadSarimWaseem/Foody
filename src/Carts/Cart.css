@@ -47,6 +47,8 @@ body {
 }
 
 .CartItem li {
+    max-width: 400px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -88,7 +90,7 @@ body {
     }
 
     .CartItem {
-        width: 90%;
+        width: 80%;
     }
 
 }

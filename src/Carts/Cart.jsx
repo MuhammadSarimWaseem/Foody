@@ -45,7 +45,7 @@ function Cart(props) {
         if (response.ok) {
             setCartData([])
             toast("Order Send!", {
-                position: "bottom-center",
+                position: "top-right",
                 autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: true,
@@ -61,7 +61,7 @@ function Cart(props) {
             });
         } else {
             toast("Failed to send order", {
-                position: "bottom-right",
+                position: "top-right",
                 autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: true,
