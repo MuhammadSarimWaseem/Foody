@@ -18,6 +18,7 @@ h1 {
 form {
     max-width: 400px;
     width: 100%;
+    min-height: 200px;
     background: linear-gradient(135deg, #1c1c1c, #333333);
     padding: 20px;
     border-radius: 12px;
