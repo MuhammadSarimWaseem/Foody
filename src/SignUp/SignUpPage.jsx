@@ -24,7 +24,7 @@ const SignUpPage = () => {
   const [message, setMessage] = useState(null);
   const [submitButtonDisabled, setSubmitButtonDisabled] = useState(false);
 
-  const Login = async (e) => {
+  const Signup = async (e) => {
     e.preventDefault();
     const { name, email, password } = input;
 
@@ -36,7 +36,7 @@ const SignUpPage = () => {
           await updateProfile(user, {
             displayName: name,
           });
-          navigate(" /Meals/MealCard");
+          navigate("/Meals/MealCard");
           toast("Account Created!", {
             position: "top-right",
             autoClose: 3000,
@@ -72,7 +72,7 @@ const SignUpPage = () => {
     <Fragment>
       <Header></Header>
 
-      <form onSubmit={Login}>
+      <form onSubmit={Signup}>
         <h1>SIGN UP</h1>
         Name:<input required name='name' onChange={InputHandler} placeholder='Enter your name' type='text' value={input.name}></input><br />
         Email:<input required name='email' onChange={InputHandler} placeholder='Enter your Email' type='email' value={input.email} ></input><br />
